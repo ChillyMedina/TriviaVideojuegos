@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia de Videojuegos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="main-wrap">
+        <section id="inicio" class="panel">
+            <div class="wrap">
+                <h1>Trivia de Videojuegos</h1>
+                <h2>¿Quieres saber cuál es tu porcentaje de ñoñez?</h2>
+                <br>
+                <button class="button" id="yesButton">Sí quiero!</button>
+            </div>
+        </section> 
+        <!------------------------------nickname------------------------------>
+        <section id="nickname" class="panel" hidden>
+            <div>
+                <h2>Ingresa el nickname que usas al jugar y al finalizar tendrás los resultados.</h2> <br>         
+                <input type="text" id="nombre" placeholder="Ingresa tu Nickname" required><br>
+                <button class="button" id= "nicknameButton" onclick="guardarNombre()">Comencemos!</button>
+            </div>
+        </section>
+    
+        <!------------------------------Saludo y Categorias------------------------------>
+        <section id="categorias" class="panel" hidden>
+           <div id="inicio" class="pantalla">
+                <h1>Hola <span id="nombre-usuario"></span></h1>
+                <h4>Elige con qué categoría quieres comenzar!</h4>
+               
+                <br>
+                <div class="flex">
+                    <button class="button" id="clasicoButton">Videojuegos clásicos</button>
+                    <button class="button" id="actualButton">Videojuegos actuales</button>
+                </div>
+                
+            </div>
+        </section>
+    
+        <!-----------------------------pregunta 1 clasicos------------------------------->
+        <section id="pregclas1" class="panel" hidden>
+            <p>
+                <div class="pregclas1">1.En Donkey kong, Mario no era fontanero, era un: </div>
+                <br>
+                <div class="align-left">
+                    <radiogroup>
+                        <input type="radio" id="constructor" name="job" value=""><label for="constructor">Un constructor llamado SuperM</label><br>
+                        <input type="radio" id="carpintero" name="job" class="correcto" value="carpintero"><label for="carpintero">Un carpintero llamado Jumpman</label><br>
+                        <input type="radio" id="cocinero" name="job" value="cocinero"><label for="cocinero">Un cocinero llamado Mariano</label><br>
+                        <input type="radio" id="mono" name="job" value="mono"><label for="mono">Un mono llamado MarioKong</label><br>
+                    </radiogroup>
+                </div>
+            </p>
+            <button class="button" id="nextButton1">Siguiente</button>
+        </section>
+    
+        <!-----------------------pregunta 2 clasicos------------------------------>
+        <section id="pregclas2" class="panel" hidden>
+            <p>
+                <div class="pregclas2">2.	¿Cuál de estos se creó primero?</div>
+                <br>
+                <div class="align-left">
+                    <radiogroup>
+                        <input type="radio" id="tetris" name="game" value="tetris"><label for="Tetris">Tetris</label><br>
+                        <input type="radio" id="pacman" name="game" value="pacman"><label for="Pacman">Pacman</label><br>
+                        <input type="radio" id="pong" name="game" class="correcto" value="pong"><label for="Pong">Pong</label><br>
+                        <input type="radio" id="supermario" name="game" value="supermario"><label for="SuperMario">SuperMario</label><br>
+                    </radiogroup>
+                </div>
+            </p>
+            <button class="button" id="nextButton2">Siguiente</button>
+        </section>
+    
+        <!--------------------------------pregunta 3 clasicos------------------------------>
+        <section id="pregclas3" class="panel" hidden>
+        <p>
+        <div class="pregclas3">3.	¿cuántos luchadores hay en street fighter II?</div>
+        <br>
+        <div class="align-left">
+        <radiogroup>
+        <input type="radio" id="12" name="number" class="correcto" value="12"><label for="12">12</label><br>
+    
+        <input type="radio" id="8" name="number" value="8"><label for="8">8</label><br>
+    
+        <input type="radio" id="4" name="number" value="4"><label for="4">4</label><br>
+    
+        <input type="radio" id="16" name="number" value="16"><label for="16">16</label><br>
+        </radiogroup>
+        </div>
+        </p>
+        <button class="button finish" id="NextButton3">Siguiente</button>
+        </section>
+    
+        <!------------------TRIVIA ACTUALES--------------->
+        <!-------------------pregunta 1 actuales---------------->
+        <section id="pregact1" class="panel" hidden>
+        <p>
+        <div class="pregact1">1.	¿Cuáles de estos son los nombres de los personajes de GTA V?</div>
+        <br>
+        <div class="align-left">
+            <radiogroup>
+            <input type="radio" id="John, Mark y Steve" name="players" value="John, Mark y Steve" ><label for="John, Mark y Steve">John, Mark y Steve</label><br>
+        
+            <input type="radio" id="Michael, Trevor y Franklin" name="players" class="correcto" value="Michael, Trevor y Franklin"><label for="Michael, Trevor y Franklin">Michael, Trevor y Franklin</label><br>
+        
+            <input type="radio" id="Frank, Trent y Mike" name="players" value="Frank, Trent y Mike"><label for="Frank, Trent y Mike">Frank, Trent y Mike</label><br>
+        
+            <input type="radio" id="Charles, Jack y Jhonson" name="players" value="Charles, Jack y Jhonson"><label for="Charles, Jack y Jhonson">Charles, Jack y Jhonson</label><br>
+            </radiogroup>
+        </div>
+        </p>
+        <button class="button" id="nextButton11">Siguiente</button>
+        </section>
+    
+        <!-------------------pregunta 2 actuales---------------->
+        <section id="pregact2" class="panel" hidden>
+        <p>
+        <div class="pregact2">2.	En el juego Among Us, ¿Cómo es conocido el jugador el enemigo?</div>
+        <br>
+        <div class="align-left">
+        <radiogroup>
+        <input type="radio" id="traicionero" name="enemy"  value="Traicionero"><label for="Traicionero">Traicionero</label><br>
+    
+        <input type="radio" id="asesino" name="enemy" value="asesino"><label for="Asesino">Asesino</label><br>
+    
+        <input type="radio" id="rival" name="enemy" value="rival"><label for="Rival">Rival</label><br>
+    
+        <input type="radio" id="impostor" name="enemy" class="correcto" value="impostor"><label for="Impostor">Impostor</label><br>
+        </radiogroup>
+        </div>
+        </p>
+        <button class="button" id="nextButton22">Siguiente</button>
+        </section>
+    
+        <!-------------------pregunta 3 actuales---------------->
+        <section id="pregact3" class="panel" hidden>
+        <p>
+        <div class="pregact3">3.	¿Cuál es el nombre de la ‘’momia triste’’ en League of Legend?</div>
+        <br>
+        <div class="align-left">
+        <radiogroup>
+        <input type="radio" id="mimi" name="personaje" value="mimi"><label for="Mimi">Mimi</label><br>
+    
+        <input type="radio" id="amumu" name="personaje" class="correcto" value="amumu"><label for="Amumu">Amumu</label><br>
+    
+        <input type="radio" id="sadmomio" name="personaje" value="sadmomio"><label for="Sadmomio">Sadmomio</label><br>
+    
+        <input type="radio" id="carlos" name="personaje" value="carlos"><label for="Carlos">Carlos</label><br>
+    
+        </radiogroup>
+        </div>
+        </p>
+        <button class="button" id="nextButton33">Siguiente</button>
+        </section>
+        <script type="text/javascript" src="script.js"></script>
+    
+    
+        <!---------------------------JUGAR DE NUEVO--------------------------->
+        <section id="playAgain" class="panel" hidden>
+            <div>
+                <p>
+                    Tu puntuacion es: <label id="contadorTotal"></label> Respuestas correctas
+                </p>
+                <p>
+                    <h4>¿Quieres volver a jugar?</h4>
+                    <link rel="stylesheet" href="style.css">
+                    </p>
+                    <br>
+                    <div class="flex">
+                        <button class="button" id="clasicoAgainButton">Videojuegos clásicos</button>
+                        <button class="button" id="actualAgainButton">Videojuegos actuales</button>
+                    </div>
+                   
+            </div>
+       
+        </section>
+    </div>
+</body>
+</html>
